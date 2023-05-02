@@ -1,0 +1,28 @@
+<button type="button" class="btn btn-secondary btn-sm" routerLink="/home">volver </button>
+<div class="text-center">
+    <h2 class="mb-4">Transacciones</h2>
+  </div>
+<table class="table table-striped my-table">
+	<thead>
+		<tr>
+			<th scope="col">Pan</th>
+			<th scope="col">Referencia</th>
+			<th scope="col">Total Compra</th>
+			<th scope="col">Estado</th>
+            <th scope="col">Direccion</th>
+		</tr>
+	</thead>
+	<tbody>
+        <tr *ngFor="let transaction of transactions">
+            <td>{{transaction.panEnmascarado}}</td>
+            <td>{{transaction.referencia}}</td>
+            <td>{{transaction.totalCompra}}</td>
+            <td>{{transaction.estado}}</td>
+            <td>{{transaction.direccionCompra }}</td>
+
+            
+        </tr>
+    </tbody>
+</table>
+
+
